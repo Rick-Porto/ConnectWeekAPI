@@ -1,0 +1,6 @@
+@connectWeek.Api_HostAddress = http://localhost:5033
+
+GET {{connectWeek.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
