@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("connectWeek.Infra")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+19f8e7fbc9bd1bbbcf1d2d7ba19f1915a0b397c3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+68983625a51e92fd70382debe57911bf10f419f5")]
 [assembly: System.Reflection.AssemblyProductAttribute("connectWeek.Infra")]
 [assembly: System.Reflection.AssemblyTitleAttribute("connectWeek.Infra")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "connectWeek.Domain/1.0.0": {
+        "runtime": {
+          "connectWeek.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "connectWeek.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

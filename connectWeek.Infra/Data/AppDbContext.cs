@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using connectWeek.Domain.Entities;
 
 namespace connectWeek.Infra.Data;
 
@@ -29,8 +30,6 @@ public class AppDbContext : DbContext
 
     public DbSet<Conquista> Conquistas { get; set; }
     public DbSet<ConquistaUsuario> ConquistasUsuarios { get; set; }
-
-    public DbSet<Notificacao> Notificacoes { get; set; }
 
     // CONFIGURAÇÕES
     protected override void OnModelCreating(ModelBuilder modelBuilder)

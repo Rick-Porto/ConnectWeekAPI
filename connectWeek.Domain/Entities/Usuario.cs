@@ -15,7 +15,6 @@ public class Usuario
     // RELACIONAMENTOS
     public ICollection<UsuarioAutenticacao> Autenticacoes { get; set; }
     public ICollection<ConquistaUsuario> Conquistas { get; set; }
-    public ICollection<Notificacao> Notificacoes { get; set; }
     public ICollection<UsuarioFuncao> Funcoes { get; set; }
     public ICollection<ExecucaoDesafio> Execucoes { get; set; }
 }

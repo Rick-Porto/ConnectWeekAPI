@@ -4,7 +4,7 @@ public class ConquistaUsuario
 {
     public Guid Id { get; set; }
     public Guid UsuarioId { get; set; }
-    public int ConquistaId { get; set; }
+    public Guid ConquistaId { get; set; }
     public DateTime ConquistadoEm { get; set; }
     public bool Visualizado { get; set; }
 
