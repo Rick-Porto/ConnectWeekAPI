@@ -9,6 +9,6 @@ public class DesafioQuestao
     public DateTime CriadoEm { get; set; }
 
     // RELACIONAMENTOS
-    public Desafio Desafio { get; set; }
-    public Questao Questao { get; set; }
+    public Desafio? Desafio { get; set; }
+    public Questao? Questao { get; set; }
 }

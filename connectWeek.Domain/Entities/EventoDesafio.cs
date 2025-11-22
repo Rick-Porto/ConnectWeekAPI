@@ -11,6 +11,6 @@ public class EventoDesafio
     public DateTime CriadoEm { get; set; }
 
     // RELACIONAMENTOS
-    public Evento Evento { get; set; }
-    public Desafio Desafio { get; set; }
+    public Evento? Evento { get; set; }
+    public Desafio? Desafio { get; set; }
 }

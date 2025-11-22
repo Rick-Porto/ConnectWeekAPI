@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("connectWeek.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+68983625a51e92fd70382debe57911bf10f419f5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3ac42f3a94a2f3f3b95e7edbbf3f36924dba361e")]
 [assembly: System.Reflection.AssemblyProductAttribute("connectWeek.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("connectWeek.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -8,6 +8,6 @@ public class QuestaoCategoria
     public DateTime CriadoEm { get; set; }
 
     // RELACIONAMENTOS
-    public Questao Questao { get; set; }
-    public Categoria Categoria { get; set; }
+    public Questao? Questao { get; set; }
+    public Categoria? Categoria { get; set; }
 }

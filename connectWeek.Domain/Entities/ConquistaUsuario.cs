@@ -9,6 +9,6 @@ public class ConquistaUsuario
     public bool Visualizado { get; set; }
 
     // RELACIONAMENTOS
-    public Usuario Usuario { get; set; }
-    public Conquista Conquista { get; set; }
+    public Usuario? Usuario { get; set; }
+    public Conquista? Conquista { get; set; }
 }

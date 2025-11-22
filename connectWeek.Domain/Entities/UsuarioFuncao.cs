@@ -9,6 +9,6 @@ public class UsuarioFuncao
     public Guid AtribuidoPor { get; set; }
 
     // RELACIONAMENTOS
-    public Usuario Usuario { get; set; }
-    public Funcao Funcao { get; set; }
+    public Usuario? Usuario { get; set; }
+    public Funcao? Funcao { get; set; }
 }

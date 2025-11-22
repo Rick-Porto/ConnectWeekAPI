@@ -3714,11 +3714,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rickm\\OneDrive\\Projetos\\GITHUB\\ConnectWeekBackend\\connectWeek.Infra\\connectWeek.Infra.csproj",
+      "projectUniqueName": "C:\\Users\\rickm\\OneDrive\\Projetos\\GITHUB\\ConnectWeekAPI\\connectWeek.Infra\\connectWeek.Infra.csproj",
       "projectName": "connectWeek.Infra",
-      "projectPath": "C:\\Users\\rickm\\OneDrive\\Projetos\\GITHUB\\ConnectWeekBackend\\connectWeek.Infra\\connectWeek.Infra.csproj",
+      "projectPath": "C:\\Users\\rickm\\OneDrive\\Projetos\\GITHUB\\ConnectWeekAPI\\connectWeek.Infra\\connectWeek.Infra.csproj",
       "packagesPath": "C:\\Users\\rickm\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rickm\\OneDrive\\Projetos\\GITHUB\\ConnectWeekBackend\\connectWeek.Infra\\obj\\",
+      "outputPath": "C:\\Users\\rickm\\OneDrive\\Projetos\\GITHUB\\ConnectWeekAPI\\connectWeek.Infra\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -3740,8 +3740,8 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "C:\\Users\\rickm\\OneDrive\\Projetos\\GITHUB\\ConnectWeekBackend\\connectWeek.Domain\\connectWeek.Domain.csproj": {
-              "projectPath": "C:\\Users\\rickm\\OneDrive\\Projetos\\GITHUB\\ConnectWeekBackend\\connectWeek.Domain\\connectWeek.Domain.csproj"
+            "C:\\Users\\rickm\\OneDrive\\Projetos\\GITHUB\\ConnectWeekAPI\\connectWeek.Domain\\connectWeek.Domain.csproj": {
+              "projectPath": "C:\\Users\\rickm\\OneDrive\\Projetos\\GITHUB\\ConnectWeekAPI\\connectWeek.Domain\\connectWeek.Domain.csproj"
             }
           }
         }

@@ -12,7 +12,7 @@ public class RespostaQuestao
     public DateTime RespondidoEm { get; set; }
 
     // RELACIONAMENTOS
-    public ExecucaoDesafio Execucao { get; set; }
-    public Questao Questao { get; set; }
-    public Alternativa Alternativa { get; set; }
+    public ExecucaoDesafio? Execucao { get; set; }
+    public Questao? Questao { get; set; }
+    public Alternativa? Alternativa { get; set; }
 }

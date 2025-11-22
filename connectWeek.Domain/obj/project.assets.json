@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rickm\\OneDrive\\Projetos\\GITHUB\\ConnectWeekBackend\\connectWeek.Domain\\connectWeek.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\rickm\\OneDrive\\Projetos\\GITHUB\\ConnectWeekAPI\\connectWeek.Domain\\connectWeek.Domain.csproj",
       "projectName": "connectWeek.Domain",
-      "projectPath": "C:\\Users\\rickm\\OneDrive\\Projetos\\GITHUB\\ConnectWeekBackend\\connectWeek.Domain\\connectWeek.Domain.csproj",
+      "projectPath": "C:\\Users\\rickm\\OneDrive\\Projetos\\GITHUB\\ConnectWeekAPI\\connectWeek.Domain\\connectWeek.Domain.csproj",
       "packagesPath": "C:\\Users\\rickm\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rickm\\OneDrive\\Projetos\\GITHUB\\ConnectWeekBackend\\connectWeek.Domain\\obj\\",
+      "outputPath": "C:\\Users\\rickm\\OneDrive\\Projetos\\GITHUB\\ConnectWeekAPI\\connectWeek.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
