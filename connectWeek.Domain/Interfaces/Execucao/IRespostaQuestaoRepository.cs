@@ -1,6 +1,6 @@
 using connectWeek.Domain.Entities;
 
-namespace connectWeek.Domain.Interfaces.Execucao;
+namespace connectWeek.Domain.Interfaces;
 
 public interface IRespostaQuestaoRepository : IBaseRepository<RespostaQuestao>
 {

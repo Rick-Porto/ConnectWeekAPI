@@ -1,7 +1,7 @@
 using connectWeek.Domain.Entities;
 using connectWeek.Domain.Interfaces.Base;
 
-namespace connectWeek.Domain.Interfaces.Questao;
+namespace connectWeek.Domain.Interfaces;
 
 public interface IQuestaoRepository : IBaseRepository<Entities.Questao>
 {
