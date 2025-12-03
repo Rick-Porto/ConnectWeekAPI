@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("connectWeek.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ed95f47fe413ab607f77500a6afeaa7899b4d6d4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c6f7f54efa1cdaf12764ba292c6405ad7b70ee0d")]
 [assembly: System.Reflection.AssemblyProductAttribute("connectWeek.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("connectWeek.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

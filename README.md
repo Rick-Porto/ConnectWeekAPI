@@ -7,9 +7,7 @@ ConnectWeek é uma plataforma para gerenciamento de desafios, usuários e evento
 - [Tecnologias](#tecnologias)  
 - [Estrutura do Projeto](#estrutura-do-projeto)  
 - [Modelagem de Dados](#modelagem-de-dados)  
-- [Entidades Principais](#entidades-principais)  
-- [Como Rodar](#como-rodar)  
-- [Contribuição](#contribuição)  
+- [Entidades Principais](#diagrama-erd)  
 
 ## Tecnologias
 
