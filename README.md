@@ -19,6 +19,7 @@ ConnectWeek é uma plataforma para gerenciamento de desafios, usuários e evento
 - SQL Server (ou outro RDBMS compatível)  
 
 ## Estrutura do Projeto
+```
 connectWeek/
 │
 ├─ connectWeek.Api/ # Camada de API (Controllers, Endpoints REST)
@@ -29,7 +30,7 @@ connectWeek/
 │ │ └─ Desafio.cs
 │ └─ Interfaces/
 ├─ connectWeek.Infras/ # Persistência, DbContext, Repositórios
-
+```
 
 ## Modelagem de Dados
 
