@@ -41,7 +41,6 @@ namespace connectWeek.Infra.Migrations
                         .HasColumnType("integer");
 
                     b.Property<string>("PathImagem")
-                        .IsRequired()
                         .HasMaxLength(500)
                         .HasColumnType("character varying(500)");
 
@@ -93,11 +92,9 @@ namespace connectWeek.Infra.Migrations
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("Criterio")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("Descricao")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("Nome")
@@ -125,16 +122,10 @@ namespace connectWeek.Infra.Migrations
                     b.Property<Guid>("ConquistaId")
                         .HasColumnType("uuid");
 
-                    b.Property<Guid?>("ConquistaId1")
-                        .HasColumnType("uuid");
-
                     b.Property<DateTime>("ConquistadoEm")
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<Guid>("UsuarioId")
-                        .HasColumnType("uuid");
-
-                    b.Property<Guid?>("UsuarioId1")
                         .HasColumnType("uuid");
 
                     b.Property<bool>("Visualizado")
@@ -144,11 +135,7 @@ namespace connectWeek.Infra.Migrations
 
                     b.HasIndex("ConquistaId");
 
-                    b.HasIndex("ConquistaId1");
-
                     b.HasIndex("UsuarioId");
-
-                    b.HasIndex("UsuarioId1");
 
                     b.ToTable("CONQUISTA_USUARIO", (string)null);
                 });
@@ -169,11 +156,9 @@ namespace connectWeek.Infra.Migrations
                         .HasColumnType("uuid");
 
                     b.Property<string>("Descricao")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("Dificuldade")
-                        .IsRequired()
                         .HasMaxLength(20)
                         .HasColumnType("character varying(20)");
 
@@ -198,7 +183,6 @@ namespace connectWeek.Infra.Migrations
                         .HasColumnType("character varying(200)");
 
                     b.Property<string>("PathImagem")
-                        .IsRequired()
                         .HasMaxLength(500)
                         .HasColumnType("character varying(500)");
 
@@ -214,12 +198,9 @@ namespace connectWeek.Infra.Migrations
                     b.Property<int>("TempoMaximoMin")
                         .HasColumnType("integer");
 
-                    b.Property<Guid>("UsuarioId")
-                        .HasColumnType("uuid");
-
                     b.HasKey("Id");
 
-                    b.HasIndex("UsuarioId");
+                    b.HasIndex("CriadoPor");
 
                     b.ToTable("DESAFIO", (string)null);
                 });
@@ -265,16 +246,11 @@ namespace connectWeek.Infra.Migrations
                     b.Property<Guid>("QuestaoId")
                         .HasColumnType("uuid");
 
-                    b.Property<Guid?>("QuestaoId1")
-                        .HasColumnType("uuid");
-
                     b.HasKey("Id");
 
                     b.HasIndex("DesafioId");
 
                     b.HasIndex("QuestaoId");
-
-                    b.HasIndex("QuestaoId1");
 
                     b.ToTable("DESAFIO_QUESTAO", (string)null);
                 });
@@ -298,7 +274,6 @@ namespace connectWeek.Infra.Migrations
                         .HasColumnType("uuid");
 
                     b.Property<string>("Descricao")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<DateTime>("Fim")
@@ -311,12 +286,10 @@ namespace connectWeek.Infra.Migrations
                         .HasColumnType("boolean");
 
                     b.Property<string>("LinkTransmissao")
-                        .IsRequired()
                         .HasMaxLength(500)
                         .HasColumnType("character varying(500)");
 
                     b.Property<string>("Local")
-                        .IsRequired()
                         .HasMaxLength(500)
                         .HasColumnType("character varying(500)");
 
@@ -326,14 +299,13 @@ namespace connectWeek.Infra.Migrations
                         .HasColumnType("character varying(200)");
 
                     b.Property<string>("PathImagem")
-                        .IsRequired()
                         .HasMaxLength(500)
                         .HasColumnType("character varying(500)");
 
                     b.Property<bool>("Publicado")
                         .HasColumnType("boolean");
 
-                    b.Property<Guid>("UsuarioId")
+                    b.Property<Guid?>("UsuarioId")
                         .HasColumnType("uuid");
 
                     b.HasKey("Id");
@@ -357,9 +329,6 @@ namespace connectWeek.Infra.Migrations
                     b.Property<Guid>("DesafioId")
                         .HasColumnType("uuid");
 
-                    b.Property<Guid?>("DesafioId1")
-                        .HasColumnType("uuid");
-
                     b.Property<Guid>("EventoId")
                         .HasColumnType("uuid");
 
@@ -375,8 +344,6 @@ namespace connectWeek.Infra.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("DesafioId");
-
-                    b.HasIndex("DesafioId1");
 
                     b.HasIndex("EventoId");
 
@@ -396,9 +363,6 @@ namespace connectWeek.Infra.Migrations
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<Guid>("DesafioId")
-                        .HasColumnType("uuid");
-
-                    b.Property<Guid?>("DesafioId1")
                         .HasColumnType("uuid");
 
                     b.Property<DateTime>("FinalizadoEm")
@@ -426,18 +390,11 @@ namespace connectWeek.Infra.Migrations
                     b.Property<Guid>("UsuarioId")
                         .HasColumnType("uuid");
 
-                    b.Property<Guid?>("UsuarioId1")
-                        .HasColumnType("uuid");
-
                     b.HasKey("Id");
 
                     b.HasIndex("DesafioId");
 
-                    b.HasIndex("DesafioId1");
-
                     b.HasIndex("UsuarioId");
-
-                    b.HasIndex("UsuarioId1");
 
                     b.ToTable("EXECUCAO_DESAFIO", (string)null);
                 });
@@ -495,7 +452,6 @@ namespace connectWeek.Infra.Migrations
                         .HasColumnType("text");
 
                     b.Property<string>("PathImagem")
-                        .IsRequired()
                         .HasMaxLength(500)
                         .HasColumnType("character varying(500)");
 
@@ -510,7 +466,7 @@ namespace connectWeek.Infra.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("character varying(50)");
 
-                    b.Property<Guid>("UsuarioId")
+                    b.Property<Guid?>("UsuarioId")
                         .HasColumnType("uuid");
 
                     b.Property<int>("VezesUtilizada")
@@ -572,9 +528,6 @@ namespace connectWeek.Infra.Migrations
                     b.Property<Guid>("QuestaoId")
                         .HasColumnType("uuid");
 
-                    b.Property<Guid?>("QuestaoId1")
-                        .HasColumnType("uuid");
-
                     b.Property<DateTime>("RespondidoEm")
                         .HasColumnType("timestamp with time zone");
 
@@ -588,8 +541,6 @@ namespace connectWeek.Infra.Migrations
                     b.HasIndex("ExecucaoId");
 
                     b.HasIndex("QuestaoId");
-
-                    b.HasIndex("QuestaoId1");
 
                     b.ToTable("RESPOSTA_QUESTAO", (string)null);
                 });
@@ -620,7 +571,6 @@ namespace connectWeek.Infra.Migrations
                         .HasColumnType("character varying(200)");
 
                     b.Property<string>("PathImagem")
-                        .IsRequired()
                         .HasMaxLength(500)
                         .HasColumnType("character varying(500)");
 
@@ -656,12 +606,10 @@ namespace connectWeek.Infra.Migrations
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("PasswordHash")
-                        .IsRequired()
                         .HasMaxLength(500)
                         .HasColumnType("character varying(500)");
 
                     b.Property<string>("Provider")
-                        .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("character varying(50)");
 
@@ -700,17 +648,12 @@ namespace connectWeek.Infra.Migrations
                     b.Property<int>("FuncaoId")
                         .HasColumnType("integer");
 
-                    b.Property<int?>("FuncaoId1")
-                        .HasColumnType("integer");
-
                     b.Property<Guid>("UsuarioId")
                         .HasColumnType("uuid");
 
                     b.HasKey("Id");
 
                     b.HasIndex("FuncaoId");
-
-                    b.HasIndex("FuncaoId1");
 
                     b.HasIndex("UsuarioId");
 
@@ -731,24 +674,16 @@ namespace connectWeek.Infra.Migrations
             modelBuilder.Entity("connectWeek.Domain.Entities.ConquistaUsuario", b =>
                 {
                     b.HasOne("connectWeek.Domain.Entities.Conquista", "Conquista")
-                        .WithMany()
+                        .WithMany("Usuarios")
                         .HasForeignKey("ConquistaId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.HasOne("connectWeek.Domain.Entities.Conquista", null)
-                        .WithMany("Usuarios")
-                        .HasForeignKey("ConquistaId1");
-
                     b.HasOne("connectWeek.Domain.Entities.Usuario", "Usuario")
-                        .WithMany()
+                        .WithMany("Conquistas")
                         .HasForeignKey("UsuarioId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
-
-                    b.HasOne("connectWeek.Domain.Entities.Usuario", null)
-                        .WithMany("Conquistas")
-                        .HasForeignKey("UsuarioId1");
 
                     b.Navigation("Conquista");
 
@@ -758,9 +693,9 @@ namespace connectWeek.Infra.Migrations
             modelBuilder.Entity("connectWeek.Domain.Entities.Desafio", b =>
                 {
                     b.HasOne("connectWeek.Domain.Entities.Usuario", "Usuario")
-                        .WithMany()
-                        .HasForeignKey("UsuarioId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .WithMany("DesafiosCriados")
+                        .HasForeignKey("CriadoPor")
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Usuario");
@@ -794,14 +729,10 @@ namespace connectWeek.Infra.Migrations
                         .IsRequired();
 
                     b.HasOne("connectWeek.Domain.Entities.Questao", "Questao")
-                        .WithMany()
+                        .WithMany("DesafioQuestoes")
                         .HasForeignKey("QuestaoId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
-
-                    b.HasOne("connectWeek.Domain.Entities.Questao", null)
-                        .WithMany("DesafioQuestoes")
-                        .HasForeignKey("QuestaoId1");
 
                     b.Navigation("Desafio");
 
@@ -812,9 +743,7 @@ namespace connectWeek.Infra.Migrations
                 {
                     b.HasOne("connectWeek.Domain.Entities.Usuario", "Usuario")
                         .WithMany()
-                        .HasForeignKey("UsuarioId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("UsuarioId");
 
                     b.Navigation("Usuario");
                 });
@@ -822,14 +751,10 @@ namespace connectWeek.Infra.Migrations
             modelBuilder.Entity("connectWeek.Domain.Entities.EventoDesafio", b =>
                 {
                     b.HasOne("connectWeek.Domain.Entities.Desafio", "Desafio")
-                        .WithMany()
+                        .WithMany("Eventos")
                         .HasForeignKey("DesafioId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
-
-                    b.HasOne("connectWeek.Domain.Entities.Desafio", null)
-                        .WithMany("Eventos")
-                        .HasForeignKey("DesafioId1");
 
                     b.HasOne("connectWeek.Domain.Entities.Evento", "Evento")
                         .WithMany("Desafios")
@@ -845,24 +770,16 @@ namespace connectWeek.Infra.Migrations
             modelBuilder.Entity("connectWeek.Domain.Entities.ExecucaoDesafio", b =>
                 {
                     b.HasOne("connectWeek.Domain.Entities.Desafio", "Desafio")
-                        .WithMany()
+                        .WithMany("Execucoes")
                         .HasForeignKey("DesafioId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("connectWeek.Domain.Entities.Desafio", null)
-                        .WithMany("Execucoes")
-                        .HasForeignKey("DesafioId1");
-
                     b.HasOne("connectWeek.Domain.Entities.Usuario", "Usuario")
-                        .WithMany()
+                        .WithMany("Execucoes")
                         .HasForeignKey("UsuarioId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
-
-                    b.HasOne("connectWeek.Domain.Entities.Usuario", null)
-                        .WithMany("Execucoes")
-                        .HasForeignKey("UsuarioId1");
 
                     b.Navigation("Desafio");
 
@@ -873,9 +790,7 @@ namespace connectWeek.Infra.Migrations
                 {
                     b.HasOne("connectWeek.Domain.Entities.Usuario", "Usuario")
                         .WithMany()
-                        .HasForeignKey("UsuarioId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("UsuarioId");
 
                     b.Navigation("Usuario");
                 });
@@ -914,14 +829,10 @@ namespace connectWeek.Infra.Migrations
                         .IsRequired();
 
                     b.HasOne("connectWeek.Domain.Entities.Questao", "Questao")
-                        .WithMany()
+                        .WithMany("Respostas")
                         .HasForeignKey("QuestaoId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
-
-                    b.HasOne("connectWeek.Domain.Entities.Questao", null)
-                        .WithMany("Respostas")
-                        .HasForeignKey("QuestaoId1");
 
                     b.Navigation("Alternativa");
 
@@ -944,14 +855,10 @@ namespace connectWeek.Infra.Migrations
             modelBuilder.Entity("connectWeek.Domain.Entities.UsuarioFuncao", b =>
                 {
                     b.HasOne("connectWeek.Domain.Entities.Funcao", "Funcao")
-                        .WithMany()
+                        .WithMany("Usuarios")
                         .HasForeignKey("FuncaoId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
-
-                    b.HasOne("connectWeek.Domain.Entities.Funcao", null)
-                        .WithMany("Usuarios")
-                        .HasForeignKey("FuncaoId1");
 
                     b.HasOne("connectWeek.Domain.Entities.Usuario", "Usuario")
                         .WithMany("Funcoes")
@@ -1018,6 +925,8 @@ namespace connectWeek.Infra.Migrations
                     b.Navigation("Autenticacoes");
 
                     b.Navigation("Conquistas");
+
+                    b.Navigation("DesafiosCriados");
 
                     b.Navigation("Execucoes");
 

@@ -16,6 +16,7 @@
           "Swashbuckle.AspNetCore": "9.0.0",
           "Swashbuckle.AspNetCore.SwaggerGen": "9.0.0",
           "Swashbuckle.AspNetCore.SwaggerUI": "9.0.0",
+          "connectWeek.App": "1.0.0",
           "connectWeek.Infra": "1.0.0"
         },
         "runtime": {
@@ -881,6 +882,17 @@
           }
         }
       },
+      "connectWeek.App/1.0.0": {
+        "dependencies": {
+          "connectWeek.Domain": "1.0.0"
+        },
+        "runtime": {
+          "connectWeek.App.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "connectWeek.Domain/1.0.0": {
         "runtime": {
           "connectWeek.Domain.dll": {
@@ -1402,6 +1414,11 @@
       "sha512": "sha512-VpQV6b8HRnw6bFFIPTOOMtOxba3/viH9K2U2LdOYNjQ2b2HrLHxjodmJr3nPwyNSrtrRPr1RDwOMJ5qqlPnCVg==",
       "path": "websocket.client/5.1.1",
       "hashPath": "websocket.client.5.1.1.nupkg.sha512"
+    },
+    "connectWeek.App/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "connectWeek.Domain/1.0.0": {
       "type": "project",

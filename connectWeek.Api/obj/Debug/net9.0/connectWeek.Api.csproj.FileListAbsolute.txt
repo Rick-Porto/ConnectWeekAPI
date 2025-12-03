@@ -279,9 +279,11 @@ C:\Users\rickm\OneDrive\Projetos\GITHUB\ConnectWeekAPI\connectWeek.Api\bin\Debug
 C:\Users\rickm\OneDrive\Projetos\GITHUB\ConnectWeekAPI\connectWeek.Api\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 C:\Users\rickm\OneDrive\Projetos\GITHUB\ConnectWeekAPI\connectWeek.Api\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 C:\Users\rickm\OneDrive\Projetos\GITHUB\ConnectWeekAPI\connectWeek.Api\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\rickm\OneDrive\Projetos\GITHUB\ConnectWeekAPI\connectWeek.Api\bin\Debug\net9.0\connectWeek.App.dll
 C:\Users\rickm\OneDrive\Projetos\GITHUB\ConnectWeekAPI\connectWeek.Api\bin\Debug\net9.0\connectWeek.Domain.dll
 C:\Users\rickm\OneDrive\Projetos\GITHUB\ConnectWeekAPI\connectWeek.Api\bin\Debug\net9.0\connectWeek.Infra.dll
 C:\Users\rickm\OneDrive\Projetos\GITHUB\ConnectWeekAPI\connectWeek.Api\bin\Debug\net9.0\connectWeek.Infra.pdb
+C:\Users\rickm\OneDrive\Projetos\GITHUB\ConnectWeekAPI\connectWeek.Api\bin\Debug\net9.0\connectWeek.App.pdb
 C:\Users\rickm\OneDrive\Projetos\GITHUB\ConnectWeekAPI\connectWeek.Api\bin\Debug\net9.0\connectWeek.Domain.pdb
 C:\Users\rickm\OneDrive\Projetos\GITHUB\ConnectWeekAPI\connectWeek.Api\obj\Debug\net9.0\connectWeek.Api.csproj.AssemblyReference.cache
 C:\Users\rickm\OneDrive\Projetos\GITHUB\ConnectWeekAPI\connectWeek.Api\obj\Debug\net9.0\rpswa.dswa.cache.json

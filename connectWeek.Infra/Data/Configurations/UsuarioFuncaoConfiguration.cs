@@ -20,7 +20,7 @@ public class UsuarioFuncaoConfiguration : IEntityTypeConfiguration<UsuarioFuncao
 
         builder
             .HasOne(x => x.Funcao)
-            .WithMany()
+            .WithMany(f => f.Usuarios)
             .HasForeignKey(x => x.FuncaoId)
             .OnDelete(DeleteBehavior.Restrict);
     }

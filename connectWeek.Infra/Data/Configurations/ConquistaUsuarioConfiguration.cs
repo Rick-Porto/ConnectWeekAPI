@@ -14,13 +14,13 @@ public class ConquistaUsuarioConfiguration : IEntityTypeConfiguration<ConquistaU
 
         builder
             .HasOne(x => x.Usuario)
-            .WithMany()
+            .WithMany(u => u.Conquistas)   // AGORA aponta pra coleção real
             .HasForeignKey(x => x.UsuarioId)
             .OnDelete(DeleteBehavior.Restrict);
 
         builder
             .HasOne(x => x.Conquista)
-            .WithMany()
+            .WithMany(c => c.Usuarios)     // AGORA aponta pra coleção real
             .HasForeignKey(x => x.ConquistaId)
             .OnDelete(DeleteBehavior.Restrict);
     }

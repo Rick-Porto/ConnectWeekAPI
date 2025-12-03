@@ -14,13 +14,13 @@ public class DesafioQuestaoConfiguration : IEntityTypeConfiguration<DesafioQuest
 
         builder
             .HasOne(x => x.Desafio)
-            .WithMany(d => d.Questoes)
+            .WithMany(q => q.Questoes)
             .HasForeignKey(x => x.DesafioId)
             .OnDelete(DeleteBehavior.Cascade);
 
         builder
             .HasOne(x => x.Questao)
-            .WithMany()
+            .WithMany(q => q.DesafioQuestoes)
             .HasForeignKey(x => x.QuestaoId)
             .OnDelete(DeleteBehavior.Restrict);
     }

@@ -1401,6 +1401,19 @@
           }
         }
       },
+      "connectWeek.App/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "connectWeek.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/connectWeek.App.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/connectWeek.App.dll": {}
+        }
+      },
       "connectWeek.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
@@ -3899,6 +3912,11 @@
         "websocket.client.nuspec"
       ]
     },
+    "connectWeek.App/1.0.0": {
+      "type": "project",
+      "path": "../connectWeek.App/connectWeek.App.csproj",
+      "msbuildProject": "../connectWeek.App/connectWeek.App.csproj"
+    },
     "connectWeek.Domain/1.0.0": {
       "type": "project",
       "path": "../connectWeek.Domain/connectWeek.Domain.csproj",
@@ -3920,6 +3938,7 @@
       "Swashbuckle.AspNetCore >= 9.0.0",
       "Swashbuckle.AspNetCore.SwaggerGen >= 9.0.0",
       "Swashbuckle.AspNetCore.SwaggerUI >= 9.0.0",
+      "connectWeek.App >= 1.0.0",
       "connectWeek.Infra >= 1.0.0"
     ]
   },
@@ -3956,6 +3975,9 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
+            "C:\\Users\\rickm\\OneDrive\\Projetos\\GITHUB\\ConnectWeekAPI\\connectWeek.App\\connectWeek.App.csproj": {
+              "projectPath": "C:\\Users\\rickm\\OneDrive\\Projetos\\GITHUB\\ConnectWeekAPI\\connectWeek.App\\connectWeek.App.csproj"
+            },
             "C:\\Users\\rickm\\OneDrive\\Projetos\\GITHUB\\ConnectWeekAPI\\connectWeek.Infra\\connectWeek.Infra.csproj": {
               "projectPath": "C:\\Users\\rickm\\OneDrive\\Projetos\\GITHUB\\ConnectWeekAPI\\connectWeek.Infra\\connectWeek.Infra.csproj"
             }

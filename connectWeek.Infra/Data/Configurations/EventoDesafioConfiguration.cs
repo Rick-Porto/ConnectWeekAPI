@@ -20,7 +20,7 @@ public class EventoDesafioConfiguration : IEntityTypeConfiguration<EventoDesafio
 
         builder
             .HasOne(x => x.Desafio)
-            .WithMany()
+            .WithMany(d => d.Eventos)
             .HasForeignKey(x => x.DesafioId)
             .OnDelete(DeleteBehavior.Restrict);
     }

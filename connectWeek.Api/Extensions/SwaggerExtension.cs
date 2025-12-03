@@ -65,7 +65,7 @@ public static class SwaggerExtension
         {
             options.DocumentTitle = "ConnectWeek API Docs";
             options.SwaggerEndpoint("/swagger/v1/swagger.json", "v1");
-            options.RoutePrefix = "cyberWeekDocs"; // http://localhost:5000/cyberWeekDocs
+            options.RoutePrefix = "connectWeekSwagger"; // http://localhost:5000/connectWeekSwagger
 
             // UI Optional Settings:
             options.DefaultModelsExpandDepth(-1); // Hide schemas

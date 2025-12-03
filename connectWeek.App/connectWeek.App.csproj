@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <!-- Domain -->
+  <ItemGroup>
+    <ProjectReference Include="..\connectWeek.Domain\connectWeek.Domain.csproj" />
+  </ItemGroup>
+  
 </Project>

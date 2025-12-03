@@ -22,6 +22,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\connectWeek.Infra\connectWeek.Infra.csproj" />
+    <ProjectReference Include="..\connectWeek.App\connectWeek.App.csproj" />
   </ItemGroup>
 
 </Project>

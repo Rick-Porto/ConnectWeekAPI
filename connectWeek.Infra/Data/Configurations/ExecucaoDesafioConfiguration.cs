@@ -12,16 +12,15 @@ public class ExecucaoDesafioConfiguration : IEntityTypeConfiguration<ExecucaoDes
 
         builder.HasKey(x => x.Id);
 
-        builder
-            .HasOne(x => x.Usuario)
-            .WithMany()
+        builder.HasOne(x => x.Usuario)
+            .WithMany(u => u.Execucoes) // Correção: especificar a coleção correta
             .HasForeignKey(x => x.UsuarioId)
             .OnDelete(DeleteBehavior.Restrict);
 
-        builder
-            .HasOne(x => x.Desafio)
-            .WithMany()
+        builder.Property(x => x.DesafioId).IsRequired();
+        builder.HasOne(x => x.Desafio)
+            .WithMany(d => d.Execucoes)
             .HasForeignKey(x => x.DesafioId)
-            .OnDelete(DeleteBehavior.Restrict);
+            .OnDelete(DeleteBehavior.Cascade);
     }
 }

@@ -18,9 +18,9 @@ public class RespostaQuestaoConfiguration : IEntityTypeConfiguration<RespostaQue
             .HasForeignKey(x => x.ExecucaoId)
             .OnDelete(DeleteBehavior.Cascade);
 
-        builder
-            .HasOne(x => x.Questao)
-            .WithMany()
+        builder.Property(x => x.QuestaoId).IsRequired();
+        builder.HasOne(x => x.Questao)
+            .WithMany(q => q.Respostas) // Correção: especificar a coleção correta
             .HasForeignKey(x => x.QuestaoId)
             .OnDelete(DeleteBehavior.Restrict);
 

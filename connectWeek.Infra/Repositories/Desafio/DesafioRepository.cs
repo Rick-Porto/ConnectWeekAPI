@@ -17,15 +17,12 @@ public class DesafioRepository : IDesafioRepository
     public async Task<Desafio?> ObterPorIdAsync(Guid id)
     {
         return await _dbContext.Desafios
-            .Include(d => d.Usuario)
             .FirstOrDefaultAsync(d => d.Id == id);
     }
 
     public async Task<IEnumerable<Desafio>> ObterTodosAsync()
     {
-        return await _dbContext.Desafios
-            .Include(d => d.Usuario)
-            .ToListAsync();
+        return await _dbContext.Desafios.ToListAsync();
     }
 
     public async Task AdicionarAsync(Desafio desafio)

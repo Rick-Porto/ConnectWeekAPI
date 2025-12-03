@@ -1,17 +1,87 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\rickm\\OneDrive\\Projetos\\GITHUB\\ConnectWeekBackend\\connectWeek.App\\connectWeek.App.csproj": {}
+    "C:\\Users\\rickm\\OneDrive\\Projetos\\GITHUB\\ConnectWeekAPI\\connectWeek.App\\connectWeek.App.csproj": {}
   },
   "projects": {
-    "C:\\Users\\rickm\\OneDrive\\Projetos\\GITHUB\\ConnectWeekBackend\\connectWeek.App\\connectWeek.App.csproj": {
+    "C:\\Users\\rickm\\OneDrive\\Projetos\\GITHUB\\ConnectWeekAPI\\connectWeek.App\\connectWeek.App.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rickm\\OneDrive\\Projetos\\GITHUB\\ConnectWeekBackend\\connectWeek.App\\connectWeek.App.csproj",
+        "projectUniqueName": "C:\\Users\\rickm\\OneDrive\\Projetos\\GITHUB\\ConnectWeekAPI\\connectWeek.App\\connectWeek.App.csproj",
         "projectName": "connectWeek.App",
-        "projectPath": "C:\\Users\\rickm\\OneDrive\\Projetos\\GITHUB\\ConnectWeekBackend\\connectWeek.App\\connectWeek.App.csproj",
+        "projectPath": "C:\\Users\\rickm\\OneDrive\\Projetos\\GITHUB\\ConnectWeekAPI\\connectWeek.App\\connectWeek.App.csproj",
         "packagesPath": "C:\\Users\\rickm\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rickm\\OneDrive\\Projetos\\GITHUB\\ConnectWeekBackend\\connectWeek.App\\obj\\",
+        "outputPath": "C:\\Users\\rickm\\OneDrive\\Projetos\\GITHUB\\ConnectWeekAPI\\connectWeek.App\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\rickm\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "C:\\Users\\rickm\\OneDrive\\Projetos\\GITHUB\\ConnectWeekAPI\\connectWeek.Domain\\connectWeek.Domain.csproj": {
+                "projectPath": "C:\\Users\\rickm\\OneDrive\\Projetos\\GITHUB\\ConnectWeekAPI\\connectWeek.Domain\\connectWeek.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.307/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\rickm\\OneDrive\\Projetos\\GITHUB\\ConnectWeekAPI\\connectWeek.Domain\\connectWeek.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\rickm\\OneDrive\\Projetos\\GITHUB\\ConnectWeekAPI\\connectWeek.Domain\\connectWeek.Domain.csproj",
+        "projectName": "connectWeek.Domain",
+        "projectPath": "C:\\Users\\rickm\\OneDrive\\Projetos\\GITHUB\\ConnectWeekAPI\\connectWeek.Domain\\connectWeek.Domain.csproj",
+        "packagesPath": "C:\\Users\\rickm\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\rickm\\OneDrive\\Projetos\\GITHUB\\ConnectWeekAPI\\connectWeek.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -66,7 +136,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.307/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

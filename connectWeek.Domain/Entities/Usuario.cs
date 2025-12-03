@@ -13,8 +13,9 @@ public class Usuario
     public bool Ativo { get; set; }
 
     // RELACIONAMENTOS
-    public ICollection<UsuarioAutenticacao>? Autenticacoes { get; set; }
-    public ICollection<ConquistaUsuario>? Conquistas { get; set; }
-    public ICollection<UsuarioFuncao>? Funcoes { get; set; }
-    public ICollection<ExecucaoDesafio>? Execucoes { get; set; }
+    public ICollection<UsuarioAutenticacao>? Autenticacoes { get; set; } = new List<UsuarioAutenticacao>();
+    public ICollection<ConquistaUsuario>? Conquistas { get; set; } = new List<ConquistaUsuario>();
+    public ICollection<UsuarioFuncao>? Funcoes { get; set; } = new List<UsuarioFuncao>();
+    public ICollection<ExecucaoDesafio>? Execucoes { get; set; } = new List<ExecucaoDesafio>();
+    public ICollection<Desafio>? DesafiosCriados { get; set; } = new List<Desafio>();
 }

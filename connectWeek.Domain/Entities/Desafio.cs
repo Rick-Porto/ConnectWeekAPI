@@ -1,3 +1,5 @@
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace connectWeek.Domain.Entities;
 
 public class Desafio
@@ -21,6 +23,7 @@ public class Desafio
     public DateTime AtualizadoEm { get; set; }
 
     // RELACIONAMENTOS
+    [ForeignKey(nameof(CriadoPor))]
     public Usuario? Usuario { get; set; }
     public ICollection<DesafioQuestao>? Questoes { get; set; }
     public ICollection<DesafioCategoria>? Categorias { get; set; }

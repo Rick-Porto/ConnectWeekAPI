@@ -32,8 +32,8 @@ namespace connectWeek.Infra.Migrations
                 {
                     Id = table.Column<Guid>(type: "uuid", nullable: false),
                     Nome = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
-                    Descricao = table.Column<string>(type: "text", nullable: false),
-                    Criterio = table.Column<string>(type: "text", nullable: false),
+                    Descricao = table.Column<string>(type: "text", nullable: true),
+                    Criterio = table.Column<string>(type: "text", nullable: true),
                     PontosBonus = table.Column<int>(type: "integer", nullable: false),
                     CriadoEm = table.Column<DateTime>(type: "timestamp with time zone", nullable: false)
                 },
@@ -64,7 +64,7 @@ namespace connectWeek.Infra.Migrations
                     Nome = table.Column<string>(type: "character varying(200)", maxLength: 200, nullable: false),
                     Email = table.Column<string>(type: "character varying(200)", maxLength: 200, nullable: false),
                     Username = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
-                    PathImagem = table.Column<string>(type: "character varying(500)", maxLength: 500, nullable: false),
+                    PathImagem = table.Column<string>(type: "character varying(500)", maxLength: 500, nullable: true),
                     EmailVerificado = table.Column<bool>(type: "boolean", nullable: false),
                     CriadoEm = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
                     UltimoAcesso = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
@@ -83,9 +83,7 @@ namespace connectWeek.Infra.Migrations
                     UsuarioId = table.Column<Guid>(type: "uuid", nullable: false),
                     ConquistaId = table.Column<Guid>(type: "uuid", nullable: false),
                     ConquistadoEm = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    Visualizado = table.Column<bool>(type: "boolean", nullable: false),
-                    ConquistaId1 = table.Column<Guid>(type: "uuid", nullable: true),
-                    UsuarioId1 = table.Column<Guid>(type: "uuid", nullable: true)
+                    Visualizado = table.Column<bool>(type: "boolean", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -97,21 +95,11 @@ namespace connectWeek.Infra.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_CONQUISTA_USUARIO_CONQUISTA_ConquistaId1",
-                        column: x => x.ConquistaId1,
-                        principalTable: "CONQUISTA",
-                        principalColumn: "Id");
-                    table.ForeignKey(
                         name: "FK_CONQUISTA_USUARIO_USUARIO_UsuarioId",
                         column: x => x.UsuarioId,
                         principalTable: "USUARIO",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
-                        name: "FK_CONQUISTA_USUARIO_USUARIO_UsuarioId1",
-                        column: x => x.UsuarioId1,
-                        principalTable: "USUARIO",
-                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -120,8 +108,8 @@ namespace connectWeek.Infra.Migrations
                 {
                     Id = table.Column<Guid>(type: "uuid", nullable: false),
                     Nome = table.Column<string>(type: "character varying(200)", maxLength: 200, nullable: false),
-                    Descricao = table.Column<string>(type: "text", nullable: false),
-                    PathImagem = table.Column<string>(type: "character varying(500)", maxLength: 500, nullable: false),
+                    Descricao = table.Column<string>(type: "text", nullable: true),
+                    PathImagem = table.Column<string>(type: "character varying(500)", maxLength: 500, nullable: true),
                     Inicio = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
                     Fim = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
                     QuantidadeQuestoes = table.Column<int>(type: "integer", nullable: false),
@@ -130,22 +118,21 @@ namespace connectWeek.Infra.Migrations
                     MaxTentativas = table.Column<int>(type: "integer", nullable: false),
                     MostrarResposta = table.Column<bool>(type: "boolean", nullable: false),
                     EmbaralharQuestoes = table.Column<bool>(type: "boolean", nullable: false),
-                    Dificuldade = table.Column<string>(type: "character varying(20)", maxLength: 20, nullable: false),
+                    Dificuldade = table.Column<string>(type: "character varying(20)", maxLength: 20, nullable: true),
                     CriadoPor = table.Column<Guid>(type: "uuid", nullable: false),
                     Publicado = table.Column<bool>(type: "boolean", nullable: false),
                     CriadoEm = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    AtualizadoEm = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    UsuarioId = table.Column<Guid>(type: "uuid", nullable: false)
+                    AtualizadoEm = table.Column<DateTime>(type: "timestamp with time zone", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_DESAFIO", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_DESAFIO_USUARIO_UsuarioId",
-                        column: x => x.UsuarioId,
+                        name: "FK_DESAFIO_USUARIO_CriadoPor",
+                        column: x => x.CriadoPor,
                         principalTable: "USUARIO",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -154,19 +141,19 @@ namespace connectWeek.Infra.Migrations
                 {
                     Id = table.Column<Guid>(type: "uuid", nullable: false),
                     Nome = table.Column<string>(type: "character varying(200)", maxLength: 200, nullable: false),
-                    Descricao = table.Column<string>(type: "text", nullable: false),
-                    PathImagem = table.Column<string>(type: "character varying(500)", maxLength: 500, nullable: false),
+                    Descricao = table.Column<string>(type: "text", nullable: true),
+                    PathImagem = table.Column<string>(type: "character varying(500)", maxLength: 500, nullable: true),
                     Inicio = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
                     Fim = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    Local = table.Column<string>(type: "character varying(500)", maxLength: 500, nullable: false),
-                    LinkTransmissao = table.Column<string>(type: "character varying(500)", maxLength: 500, nullable: false),
+                    Local = table.Column<string>(type: "character varying(500)", maxLength: 500, nullable: true),
+                    LinkTransmissao = table.Column<string>(type: "character varying(500)", maxLength: 500, nullable: true),
                     CapacidadeMaxima = table.Column<int>(type: "integer", nullable: false),
                     InscricaoAberta = table.Column<bool>(type: "boolean", nullable: false),
                     CriadoPor = table.Column<Guid>(type: "uuid", nullable: false),
                     Publicado = table.Column<bool>(type: "boolean", nullable: false),
                     CriadoEm = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
                     AtualizadoEm = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    UsuarioId = table.Column<Guid>(type: "uuid", nullable: false)
+                    UsuarioId = table.Column<Guid>(type: "uuid", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -175,8 +162,7 @@ namespace connectWeek.Infra.Migrations
                         name: "FK_EVENTO_USUARIO_UsuarioId",
                         column: x => x.UsuarioId,
                         principalTable: "USUARIO",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -185,7 +171,7 @@ namespace connectWeek.Infra.Migrations
                 {
                     Id = table.Column<Guid>(type: "uuid", nullable: false),
                     Enunciado = table.Column<string>(type: "text", nullable: false),
-                    PathImagem = table.Column<string>(type: "character varying(500)", maxLength: 500, nullable: false),
+                    PathImagem = table.Column<string>(type: "character varying(500)", maxLength: 500, nullable: true),
                     TipoQuestao = table.Column<string>(type: "character varying(50)", maxLength: 50, nullable: false),
                     Peso = table.Column<decimal>(type: "numeric", nullable: false),
                     Dificuldade = table.Column<string>(type: "character varying(20)", maxLength: 20, nullable: false),
@@ -195,7 +181,7 @@ namespace connectWeek.Infra.Migrations
                     VezesUtilizada = table.Column<int>(type: "integer", nullable: false),
                     CriadoEm = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
                     AtualizadoEm = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    UsuarioId = table.Column<Guid>(type: "uuid", nullable: false)
+                    UsuarioId = table.Column<Guid>(type: "uuid", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -204,8 +190,7 @@ namespace connectWeek.Infra.Migrations
                         name: "FK_QUESTAO_USUARIO_UsuarioId",
                         column: x => x.UsuarioId,
                         principalTable: "USUARIO",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -214,9 +199,9 @@ namespace connectWeek.Infra.Migrations
                 {
                     Id = table.Column<Guid>(type: "uuid", nullable: false),
                     UsuarioId = table.Column<Guid>(type: "uuid", nullable: false),
-                    Provider = table.Column<string>(type: "character varying(50)", maxLength: 50, nullable: false),
+                    Provider = table.Column<string>(type: "character varying(50)", maxLength: 50, nullable: true),
                     ProviderSub = table.Column<string>(type: "character varying(200)", maxLength: 200, nullable: false),
-                    PasswordHash = table.Column<string>(type: "character varying(500)", maxLength: 500, nullable: false),
+                    PasswordHash = table.Column<string>(type: "character varying(500)", maxLength: 500, nullable: true),
                     CriadoEm = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
                     AtualizadoEm = table.Column<DateTime>(type: "timestamp with time zone", nullable: false)
                 },
@@ -240,8 +225,7 @@ namespace connectWeek.Infra.Migrations
                     UsuarioId = table.Column<Guid>(type: "uuid", nullable: false),
                     FuncaoId = table.Column<int>(type: "integer", nullable: false),
                     AtribuidoEm = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    AtribuidoPor = table.Column<Guid>(type: "uuid", nullable: false),
-                    FuncaoId1 = table.Column<int>(type: "integer", nullable: true)
+                    AtribuidoPor = table.Column<Guid>(type: "uuid", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -252,11 +236,6 @@ namespace connectWeek.Infra.Migrations
                         principalTable: "FUNCAO",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
-                        name: "FK_USUARIO_FUNCAO_FUNCAO_FuncaoId1",
-                        column: x => x.FuncaoId1,
-                        principalTable: "FUNCAO",
-                        principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_USUARIO_FUNCAO_USUARIO_UsuarioId",
                         column: x => x.UsuarioId,
@@ -305,9 +284,7 @@ namespace connectWeek.Infra.Migrations
                     Tentativa = table.Column<int>(type: "integer", nullable: false),
                     TempoGasto = table.Column<int>(type: "integer", nullable: false),
                     Status = table.Column<string>(type: "text", nullable: false),
-                    CriadoEm = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    DesafioId1 = table.Column<Guid>(type: "uuid", nullable: true),
-                    UsuarioId1 = table.Column<Guid>(type: "uuid", nullable: true)
+                    CriadoEm = table.Column<DateTime>(type: "timestamp with time zone", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -317,23 +294,13 @@ namespace connectWeek.Infra.Migrations
                         column: x => x.DesafioId,
                         principalTable: "DESAFIO",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
-                        name: "FK_EXECUCAO_DESAFIO_DESAFIO_DesafioId1",
-                        column: x => x.DesafioId1,
-                        principalTable: "DESAFIO",
-                        principalColumn: "Id");
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_EXECUCAO_DESAFIO_USUARIO_UsuarioId",
                         column: x => x.UsuarioId,
                         principalTable: "USUARIO",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
-                        name: "FK_EXECUCAO_DESAFIO_USUARIO_UsuarioId1",
-                        column: x => x.UsuarioId1,
-                        principalTable: "USUARIO",
-                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -347,8 +314,7 @@ namespace connectWeek.Infra.Migrations
                     Ordem = table.Column<int>(type: "integer", nullable: false),
                     Obrigatorio = table.Column<bool>(type: "boolean", nullable: false),
                     Liberacao = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    CriadoEm = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    DesafioId1 = table.Column<Guid>(type: "uuid", nullable: true)
+                    CriadoEm = table.Column<DateTime>(type: "timestamp with time zone", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -359,11 +325,6 @@ namespace connectWeek.Infra.Migrations
                         principalTable: "DESAFIO",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
-                        name: "FK_EVENTO_DESAFIO_DESAFIO_DesafioId1",
-                        column: x => x.DesafioId1,
-                        principalTable: "DESAFIO",
-                        principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_EVENTO_DESAFIO_EVENTO_EventoId",
                         column: x => x.EventoId,
@@ -379,7 +340,7 @@ namespace connectWeek.Infra.Migrations
                     Id = table.Column<Guid>(type: "uuid", nullable: false),
                     QuestaoId = table.Column<Guid>(type: "uuid", nullable: false),
                     Texto = table.Column<string>(type: "text", nullable: false),
-                    PathImagem = table.Column<string>(type: "character varying(500)", maxLength: 500, nullable: false),
+                    PathImagem = table.Column<string>(type: "character varying(500)", maxLength: 500, nullable: true),
                     Correta = table.Column<bool>(type: "boolean", nullable: false),
                     Ordem = table.Column<int>(type: "integer", nullable: false),
                     CriadoEm = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
@@ -405,8 +366,7 @@ namespace connectWeek.Infra.Migrations
                     DesafioId = table.Column<Guid>(type: "uuid", nullable: false),
                     QuestaoId = table.Column<Guid>(type: "uuid", nullable: false),
                     Ordem = table.Column<int>(type: "integer", nullable: false),
-                    CriadoEm = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    QuestaoId1 = table.Column<Guid>(type: "uuid", nullable: true)
+                    CriadoEm = table.Column<DateTime>(type: "timestamp with time zone", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -423,11 +383,6 @@ namespace connectWeek.Infra.Migrations
                         principalTable: "QUESTAO",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
-                        name: "FK_DESAFIO_QUESTAO_QUESTAO_QuestaoId1",
-                        column: x => x.QuestaoId1,
-                        principalTable: "QUESTAO",
-                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -469,8 +424,7 @@ namespace connectWeek.Infra.Migrations
                     Correta = table.Column<bool>(type: "boolean", nullable: false),
                     Pontuacao = table.Column<decimal>(type: "numeric", nullable: false),
                     TempoResposta = table.Column<int>(type: "integer", nullable: false),
-                    RespondidoEm = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    QuestaoId1 = table.Column<Guid>(type: "uuid", nullable: true)
+                    RespondidoEm = table.Column<DateTime>(type: "timestamp with time zone", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -493,11 +447,6 @@ namespace connectWeek.Infra.Migrations
                         principalTable: "QUESTAO",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
-                        name: "FK_RESPOSTA_QUESTAO_QUESTAO_QuestaoId1",
-                        column: x => x.QuestaoId1,
-                        principalTable: "QUESTAO",
-                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateIndex(
@@ -523,24 +472,14 @@ namespace connectWeek.Infra.Migrations
                 column: "ConquistaId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_CONQUISTA_USUARIO_ConquistaId1",
-                table: "CONQUISTA_USUARIO",
-                column: "ConquistaId1");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_CONQUISTA_USUARIO_UsuarioId",
                 table: "CONQUISTA_USUARIO",
                 column: "UsuarioId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_CONQUISTA_USUARIO_UsuarioId1",
-                table: "CONQUISTA_USUARIO",
-                column: "UsuarioId1");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_DESAFIO_UsuarioId",
+                name: "IX_DESAFIO_CriadoPor",
                 table: "DESAFIO",
-                column: "UsuarioId");
+                column: "CriadoPor");
 
             migrationBuilder.CreateIndex(
                 name: "IX_DESAFIO_CATEGORIA_CategoriaId",
@@ -563,11 +502,6 @@ namespace connectWeek.Infra.Migrations
                 column: "QuestaoId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_DESAFIO_QUESTAO_QuestaoId1",
-                table: "DESAFIO_QUESTAO",
-                column: "QuestaoId1");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_EVENTO_UsuarioId",
                 table: "EVENTO",
                 column: "UsuarioId");
@@ -576,11 +510,6 @@ namespace connectWeek.Infra.Migrations
                 name: "IX_EVENTO_DESAFIO_DesafioId",
                 table: "EVENTO_DESAFIO",
                 column: "DesafioId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_EVENTO_DESAFIO_DesafioId1",
-                table: "EVENTO_DESAFIO",
-                column: "DesafioId1");
 
             migrationBuilder.CreateIndex(
                 name: "IX_EVENTO_DESAFIO_EventoId",
@@ -593,19 +522,9 @@ namespace connectWeek.Infra.Migrations
                 column: "DesafioId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_EXECUCAO_DESAFIO_DesafioId1",
-                table: "EXECUCAO_DESAFIO",
-                column: "DesafioId1");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_EXECUCAO_DESAFIO_UsuarioId",
                 table: "EXECUCAO_DESAFIO",
                 column: "UsuarioId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_EXECUCAO_DESAFIO_UsuarioId1",
-                table: "EXECUCAO_DESAFIO",
-                column: "UsuarioId1");
 
             migrationBuilder.CreateIndex(
                 name: "IX_FUNCAO_Nome",
@@ -644,11 +563,6 @@ namespace connectWeek.Infra.Migrations
                 column: "QuestaoId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_RESPOSTA_QUESTAO_QuestaoId1",
-                table: "RESPOSTA_QUESTAO",
-                column: "QuestaoId1");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_USUARIO_Email",
                 table: "USUARIO",
                 column: "Email",
@@ -675,11 +589,6 @@ namespace connectWeek.Infra.Migrations
                 name: "IX_USUARIO_FUNCAO_FuncaoId",
                 table: "USUARIO_FUNCAO",
                 column: "FuncaoId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_USUARIO_FUNCAO_FuncaoId1",
-                table: "USUARIO_FUNCAO",
-                column: "FuncaoId1");
 
             migrationBuilder.CreateIndex(
                 name: "IX_USUARIO_FUNCAO_UsuarioId",

@@ -1,4 +1,7 @@
 using connectWeek.Api.Extensions;
+using connectWeek.App.Interfaces;
+using connectWeek.App.Services;
+using connectWeek.Domain.Interfaces;
 using connectWeek.Infra.Data;
 using Microsoft.EntityFrameworkCore;
 
@@ -15,6 +18,10 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 builder.Services.AddSwaggerExtension();
+builder.Services.AddControllers();
+
+// Registrar serviços da aplicação e repositórios
+builder.Services.ConfigureDependencyInjection();
 
 var app = builder.Build();
 
@@ -29,12 +36,12 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.MapGet("/", () => new
-{
-    message = "ConnectWeek API Working!",
-    swagger = "/swagger",
-    timestamp = DateTime.UtcNow
-});
+// app.MapGet("/", () => new
+// {
+//     message = "ConnectWeek API Working!",
+//     swagger = "/swagger",
+//     timestamp = DateTime.UtcNow
+// });
 
 app.MapControllers();
 

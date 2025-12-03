@@ -1,0 +1,16 @@
+C:\Users\rickm\OneDrive\Projetos\GITHUB\ConnectWeekAPI\connectWeek.App\bin\Debug\net9.0\connectWeek.App.deps.json
+C:\Users\rickm\OneDrive\Projetos\GITHUB\ConnectWeekAPI\connectWeek.App\bin\Debug\net9.0\connectWeek.App.dll
+C:\Users\rickm\OneDrive\Projetos\GITHUB\ConnectWeekAPI\connectWeek.App\bin\Debug\net9.0\connectWeek.App.pdb
+C:\Users\rickm\OneDrive\Projetos\GITHUB\ConnectWeekAPI\connectWeek.App\bin\Debug\net9.0\connectWeek.Domain.dll
+C:\Users\rickm\OneDrive\Projetos\GITHUB\ConnectWeekAPI\connectWeek.App\bin\Debug\net9.0\connectWeek.Domain.pdb
+C:\Users\rickm\OneDrive\Projetos\GITHUB\ConnectWeekAPI\connectWeek.App\obj\Debug\net9.0\connectWeek.App.csproj.AssemblyReference.cache
+C:\Users\rickm\OneDrive\Projetos\GITHUB\ConnectWeekAPI\connectWeek.App\obj\Debug\net9.0\connectWeek.App.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rickm\OneDrive\Projetos\GITHUB\ConnectWeekAPI\connectWeek.App\obj\Debug\net9.0\connectWeek.App.AssemblyInfoInputs.cache
+C:\Users\rickm\OneDrive\Projetos\GITHUB\ConnectWeekAPI\connectWeek.App\obj\Debug\net9.0\connectWeek.App.AssemblyInfo.cs
+C:\Users\rickm\OneDrive\Projetos\GITHUB\ConnectWeekAPI\connectWeek.App\obj\Debug\net9.0\connectWeek.App.csproj.CoreCompileInputs.cache
+C:\Users\rickm\OneDrive\Projetos\GITHUB\ConnectWeekAPI\connectWeek.App\obj\Debug\net9.0\connectWeek.App.sourcelink.json
+C:\Users\rickm\OneDrive\Projetos\GITHUB\ConnectWeekAPI\connectWeek.App\obj\Debug\net9.0\connectW.084F24E4.Up2Date
+C:\Users\rickm\OneDrive\Projetos\GITHUB\ConnectWeekAPI\connectWeek.App\obj\Debug\net9.0\connectWeek.App.dll
+C:\Users\rickm\OneDrive\Projetos\GITHUB\ConnectWeekAPI\connectWeek.App\obj\Debug\net9.0\refint\connectWeek.App.dll
+C:\Users\rickm\OneDrive\Projetos\GITHUB\ConnectWeekAPI\connectWeek.App\obj\Debug\net9.0\connectWeek.App.pdb
+C:\Users\rickm\OneDrive\Projetos\GITHUB\ConnectWeekAPI\connectWeek.App\obj\Debug\net9.0\ref\connectWeek.App.dll
