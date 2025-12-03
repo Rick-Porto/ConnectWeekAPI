@@ -24,17 +24,13 @@ namespace ConnectWeek.Api.Controllers
         /// <response code="201">Desafio criado com sucesso</response>
         /// <response code="400">Dados inválidos</response>
         /// <response code="401">Não autorizado</response>
-        [HttpPost]
-        public async Task<ActionResult<CriaDesafioDto>> CriarDesafio([FromBody] CriaDesafioDto criaDesafioDto, Guid idUsuario)
+        [HttpPost("criarDesafio")]
+        public async Task<ActionResult<CriaDesafioDto>> CriarDesafioAsync(CriaDesafioDto criaDesafioDto, Guid idUsuario)
         {
             try
             {
                 var desafio = await _desafioService.CriarDesafioAsync(criaDesafioDto, idUsuario);
-                return CreatedAtAction(nameof(CriarDesafio), new { id = desafio.Id }, desafio);
-            }
-            catch (UnauthorizedAccessException ex)
-            {
-                return Unauthorized(new { message = ex.Message });
+                return Ok(desafio);
             }
             catch (ArgumentException ex)
             {

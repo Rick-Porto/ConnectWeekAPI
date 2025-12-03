@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("connectWeek.App")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c921407d5d2e7c2653173986405a92190c3c984c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+28b63b90536eeafb2a306629c5520e725be9ebeb")]
 [assembly: System.Reflection.AssemblyProductAttribute("connectWeek.App")]
 [assembly: System.Reflection.AssemblyTitleAttribute("connectWeek.App")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
