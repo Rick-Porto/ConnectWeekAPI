@@ -13,10 +13,10 @@ ConnectWeek é uma plataforma para gerenciamento de desafios, usuários e evento
 
 ## Tecnologias
 
-- .NET 7  
+- .NET 9.0.307  
 - C#  
 - Entity Framework Core  
-- SQL Server (ou outro RDBMS compatível)  
+- PostgreSQL (Supabase)
 
 ## Estrutura do Projeto
 ```
