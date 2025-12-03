@@ -20,16 +20,15 @@ ConnectWeek é uma plataforma para gerenciamento de desafios, usuários e evento
 
 ## Estrutura do Projeto
 ```
-connectWeek/
-│
+connectWeekApi/
 ├─ connectWeek.Api/ # Camada de API (Controllers, Endpoints REST)
-├─ connectWeek.App/ # Lógica de aplicação e DTOs
-├─ connectWeek.Domain/ # Entidades, Interfaces e Regras de Negócio
+├─ connectWeek.App/ # Lógica de aplicação, DTOs, Regras de Negócio e Interfaces dos Serviços
+├─ connectWeek.Domain/ # Entidades e Interfaces
 │ ├─ Entities/
 │ │ ├─ Usuario.cs
 │ │ └─ Desafio.cs
 │ └─ Interfaces/
-├─ connectWeek.Infras/ # Persistência, DbContext, Repositórios
+├─ connectWeek.Infra/ # DbContext, Repositórios
 ```
 
 ## Modelagem de Dados
