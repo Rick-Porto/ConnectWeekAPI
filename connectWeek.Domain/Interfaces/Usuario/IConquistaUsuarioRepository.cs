@@ -2,7 +2,7 @@ using connectWeek.Domain.Entities;
 
 namespace connectWeek.Domain.Interfaces;
 
-public interface IConquistaRepository : IBaseRepository<ConquistaUsuario>
+public interface IConquistaUsuarioRepository : IBaseRepository<ConquistaUsuario>
 {
     Task<IEnumerable<ConquistaUsuario>> ObterPorUsuarioIdAsync(Guid usuarioId);
     Task<ConquistaUsuario?> AssociarAsync(Guid idUsuario, Guid idConquista);

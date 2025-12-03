@@ -1,15 +1,14 @@
 using connectWeek.Domain.Entities;
-using connectWeek.Domain.Interfaces.Base;
 
 namespace connectWeek.Domain.Interfaces;
 
-public interface IQuestaoRepository : IBaseRepository<Entities.Questao>
+public interface IQuestaoRepository : IBaseRepository<Questao>
 {
-    Task<IEnumerable<Entities.Questao>> ObterPorDificuldadeAsync(string dificuldade);
-    Task<IEnumerable<Entities.Questao>> ObterPorTipoAsync(string tipo);
-    Task<IEnumerable<Entities.Questao>> ObterPublicadasAsync();
-    Task<IEnumerable<Entities.Questao>> ObterPorUsuarioAsync(Guid usuarioId);
-    Task<Entities.Questao?> ObterComAlternativasAsync(Guid id);
-    Task<Entities.Questao?> ObterComCategoriasAsync(Guid id);
+    Task<IEnumerable<Questao>> ObterPorDificuldadeAsync(string dificuldade);
+    Task<IEnumerable<Questao>> ObterPorTipoAsync(string tipo);
+    Task<IEnumerable<Questao>> ObterPublicadasAsync();
+    Task<IEnumerable<Questao>> ObterPorUsuarioAsync(Guid usuarioId);
+    Task<Questao?> ObterComAlternativasAsync(Guid id);
+    Task<Questao?> ObterComCategoriasAsync(Guid id);
     Task IncrementarVezesUtilizadaAsync(Guid id);
 }
